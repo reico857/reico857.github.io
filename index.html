@@ -390,13 +390,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="666"><a href="#666" class="headerlink" title="666"></a>666</h3><p><a target="_blank" rel="noopener" href="https://pintia.cn/problem-sets/1332133802696036352/problems/1332134051825102907">题目链接</a></p>
-<p>题目要求$S_n=6+66+666+…\underbrace{6…6}_{n个6}$，假设$S_n$是数列${s_n}$的前$n$项和，则$s_n=\begin{cases}6,&amp;n=1\s_{n-1}*10+6,&amp;n\ge2\end{cases}$，我们可以用变量$num$记录当前的数字是多大，然后在答案加上$num$后输出即可，$n$的范围是$[0,10)$，也就是说最多是$666666666$，比$int$最大值要小，所以只需要开int记录答案和当前数字即可，如果$n$的范围更大，就需要$long long$或者高精度了。</p>
-<h3 id="code"><a href="#code" class="headerlink" title="code"></a>code</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line">s_n</span><br><span class="line"><span class="keyword">int</span> n, res, num;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">while</span> (n--)&#123;</span><br><span class="line">        num = num * <span class="number">10</span> + <span class="number">6</span>;</span><br><span class="line">        res += num;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, res);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>其实可以求出来$S_n=\frac{20\times (10^n-1)}{27}-\frac{2n}{3}$，高中知识就能推出来。</p>
-<p>假设$n\ge 2$，设$a_n=s_n+x=10s_{n-1}+6+x=10(s_{n-1}+\frac{6+x}{10}),a_{n-1}=s_{n-1}+x,a_n=10a_{n-1},x=\frac{6+x}{10},x=\frac{2}{3},\Sigma a_n=\frac{20\times (10^n-1)}{27}$,$S_n=\frac{20\times (10^n-1)}{27}-\frac{2n}{3}$</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span> <span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span> (<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%.0f&quot;</span>, (<span class="number">20</span> * (<span class="built_in">pow</span>(<span class="number">10</span>, n) - <span class="number">1</span>) - <span class="number">18</span> * n) / <span class="number">27</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <h3 id="666"><a href="#666" class="headerlink" title="666"></a>666</h3>
+        
       
 
       
@@ -745,80 +740,6 @@
 
 
   
-    <article id="post-q-pow" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/24/q-pow/">快速幂（带取余）</a>
-    </h1>
-  
-
-        
-        <a href="/2020/12/24/q-pow/" class="archive-article-date">
-  	<time datetime="2020-12-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="引例"><a href="#引例" class="headerlink" title="引例"></a>引例</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1226">洛谷P1226</a></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/12/24/q-pow/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-u-f-algorithm" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -864,6 +785,80 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/12/24/u-f-algorithm/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-q-pow" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/24/q-pow/">快速幂（带取余）</a>
+    </h1>
+  
+
+        
+        <a href="/2020/12/24/q-pow/" class="archive-article-date">
+  	<time datetime="2020-12-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="引例"><a href="#引例" class="headerlink" title="引例"></a>引例</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1226">洛谷P1226</a></p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/12/24/q-pow/">展开全文 >></a>
         </p>
       
 
